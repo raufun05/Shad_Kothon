@@ -1,4 +1,5 @@
 import React from 'react';
+import data from './data';
 
 function App() {
   return (
@@ -8,11 +9,11 @@ function App() {
            <button onclick="openMenu()">
                &#9776;
            </button>
-           <a href="index.html"> Shad Kothon</a>
+           <a href="/"> Shad Kothon</a>
        </div>
        <div className="header-links">
-           <a href="cart.html">Cart</a>
-           <a href="signin.html">Sign In</a>
+           <a href="/cart">Cart</a>
+           <a href="/signin">Sign In</a>
        </div>
     </header>
     <aside className="sidebar">
@@ -45,146 +46,32 @@ function App() {
               </div>
             </div>
         <div className="row center">
-            <div className="card">
-                <a href="product.html">
-                    <img className="product-image" src="images/chanar_shondesh.jpg" alt="chanar_shondesh"/>
-                </a>
-                <div className="card-body">
-                    <a href="product.html"> 
-                        <h1>Chanar Shondesh</h1>
+            {data.products.map((product) => (
+                    <div key={product._id} className="card">
+                    <a href={`/product/${product._id}`}>
+                        <img 
+                        className="product-image" 
+                        src={product.image} 
+                        alt={product.name}/>
                     </a>
-                    <div className="rating">
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>      
-                   </div>
-                    <div className="price">
-                       Price $50.00
+                    <div className="card-body">
+                    <a href={`/product/${product._id}`}>
+                            <h1>{product.name}</h1>
+                        </a>
+                        <div className="rating">
+                            <span><i className="fa fa-star"></i></span>
+                            <span><i className="fa fa-star"></i></span>
+                            <span><i className="fa fa-star"></i></span>
+                            <span><i className="fa fa-star"></i></span>
+                            <span><i className="fa fa-star"></i></span>      
+                       </div>
+                        <div className="price">${product.price}</div> 
                     </div>
                 </div>
-            </div>
-            <div className="card">
-                <a href="product.html">
-                    <img className="product-image" src="images/chanar_shondesh.jpg" alt="chanar_shondesh"/>
-                </a>
-                <div className="card-body">
-                    <a href="product.html"> 
-                        <h1>Chanar Shondesh</h1>
-                    </a>
-                    <div className="rating">
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>      
-                   </div>
-                    <div className="price">
-                       Price $50.00
-                    </div>
-                </div>
-            </div>
-            <div className="card">
-                <a href="product.html">
-                    <img className="product-image" src="images/chanar_shondesh.jpg" alt="chanar_shondesh"/>
-                </a>
-                <div className="card-body">
-                    <a href="product.html"> 
-                        <h1>Chanar Shondesh</h1>
-                    </a>
-                    <div className="rating">
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>      
-                   </div>
-                    <div className="price">
-                       Price $50.00
-                    </div>
-                </div>
-            </div>
-            <div className="card">
-                <a href="product.html">
-                    <img className="product-image" src="images/chanar_shondesh.jpg" alt="chanar_shondesh"/>
-                </a>
-                <div className="card-body">
-                    <a href="product.html"> 
-                        <h1>Chanar Shondesh</h1>
-                    </a>
-                    <div className="rating">
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>      
-                   </div>
-                    <div className="price">
-                       Price $50.00
-                    </div>
-                </div>
-            </div>
-            <div className="card">
-                <a href="product.html">
-                    <img className="product-image" src="images/chanar_shondesh.jpg" alt="chanar_shondesh"/>
-                </a>
-                <div className="card-body">
-                    <a href="product.html"> 
-                        <h1>Chanar Shondesh</h1>
-                    </a>
-                    <div className="rating">
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star-full-o"></i></span>      
-                   </div>
-                    <div className="price">
-                       Price $50.00
-                    </div>
-                </div>
-            </div>
-            <div className="card">
-                <a href="product.html">
-                    <img className="product-image" src="images/chanar_shondesh.jpg" alt="chanar_shondesh"/>
-                </a>
-                <div className="card-body">
-                    <a href="product.html"> 
-                        <h1>Chanar Shondesh</h1>
-                    </a>
-                    <div className="rating">
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star-half-o"></i></span>      
-                   </div>
-                    <div className="price">
-                       Price $50.00
-                    </div>
-                </div>
-            </div>
-            <div className="card">
-                <a href="product.html">
-                    <img className="product-image" src="images/chanar_shondesh.jpg" alt="chanar_shondesh"/>
-                </a>
-                <div className="card-body">
-                    <a href="product.html"> 
-                        <h1>Chanar Shondesh</h1>
-                    </a>
-                    <div className="rating">
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star"></i></span>
-                        <span><i className="fa fa-star-half-o"></i></span>      
-                   </div>
-                    <div className="price">
-                       Price $50.00
-                    </div>
-                </div>
-            </div>
+
+                ))
+            }
+         
         </div>
     </main>
     <footer className = "footer">
