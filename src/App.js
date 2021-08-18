@@ -1,9 +1,12 @@
 import React from 'react';
-import Product from './components/Product';
-import data from './data';
+import { BrowserRouter, Route } from 'react-router-dom';
+import HomeScreen from './screens/HomeScreen';
+import ProductScreen from './screens/ProductScreen'
+
 
 function App() {
   return (
+      <BrowserRouter>
     <div className = "grid-container">
     <header className = "row">
        <div className ="brand">
@@ -32,10 +35,11 @@ function App() {
             </li>
         </ul>
     </aside>
+    
     <main>
         <div className="logo-section">
             <div id="logo">
-                <a href="https://www.shadkothan.com"> <img className="logo" src="images/ShadKothon_Logo.jpg" alt="Logo" /></a>
+                <a href="https://www.shadkothon.com"> <img className="logo" src="images/ShadKothon_Logo.jpg" alt="Logo" /></a>
             </div>
           </div>
           <div className="dropdown">
@@ -46,19 +50,15 @@ function App() {
                 <a href="index.html">Entrees</a>
               </div>
             </div>
-        <div className="row center">
-            {data.products.map((product) => (
-                 <Product key={product._id} product={product}></Product>   
-
-                ))
-            }
-         
-        </div>
+            <Route path="/product/:id" component={ProductScreen}></Route>
+            <Route path="/" component={HomeScreen} exact></Route>
+       
     </main>
     <footer className = "footer">
         All right reserved
     </footer>
 </div>
+</BrowserRouter>
   );
 }
 

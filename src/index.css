@@ -37,7 +37,6 @@ h2{
 header{
   grid-area: header;
   background-color: #203040;
-  color: #ffffff;
   padding: 1rem;
 }
 .row{
@@ -48,6 +47,9 @@ header{
 }
 .row.center{
   justify-content: center;
+}
+.row.top{
+  align-items: flex-start;
 }
 
 
