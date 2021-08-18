@@ -11,7 +11,12 @@ export default function ProductScreen (props){
     }
     return (
     <div>
-        <Link to ="/">Back to Result</Link>
+        {/* <div className="logo-section">
+            <div id="logo">
+                <a href="https://www.shadkothon.com"> <img className="logo" src="../images/ShadKothon_Logo.jpg" alt="Logo" /></a>
+            </div>
+          </div> */}
+          <Link className="backpage" to ="/">Back to Result</Link>
         <div className ="row top">
             <div className="col-2">
                 <img className="large" src={product.image} alt={product.name}></img>

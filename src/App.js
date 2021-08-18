@@ -35,21 +35,27 @@ function App() {
             </li>
         </ul>
     </aside>
-    
-    <main>
-        <div className="logo-section">
+    {/* <div className="row down">
+  <div className="column 1">
+  <div className="logo-section">
             <div id="logo">
                 <a href="https://www.shadkothon.com"> <img className="logo" src="images/ShadKothon_Logo.jpg" alt="Logo" /></a>
             </div>
           </div>
-          <div className="dropdown">
+  </div>
+
+</div> */}
+    
+    <main>
+        
+          {/* <div className="dropdown">
               <button  className="dropbtn">Food Categories <i className="fa fa-caret-down" aria-hidden="true"></i></button>
               <div id="myDropdown" className="dropdown-content">
                 <a href="index.html">Appetizers</a>
                 <a href="index.html">Desserts</a>
                 <a href="index.html">Entrees</a>
               </div>
-            </div>
+            </div> */}
             <Route path="/product/:id" component={ProductScreen}></Route>
             <Route path="/" component={HomeScreen} exact></Route>
        
