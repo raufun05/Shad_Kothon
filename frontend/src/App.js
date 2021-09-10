@@ -20,9 +20,9 @@ function App() {
            <a href="/signin">Sign In</a>
        </div>
     </header>
-    <aside className="sidebar">
+    {/* <aside className="sidebar">
         <h1>Food Categories</h1>
-        <button className="sidebar-close-button" onclick="closeMenu()">x</button>
+        <button className="sidebar-close-button" onClick="closeMenu()">x</button>
         <ul className="category">
             <li className="appetize">
                 <a href="index.html">Appetizers</a>
@@ -34,7 +34,7 @@ function App() {
                 <a href="index.html">Entrees</a>
             </li>
         </ul>
-    </aside>
+    </aside> */}
     {/* <div className="row down">
   <div className="column 1">
   <div className="logo-section">
