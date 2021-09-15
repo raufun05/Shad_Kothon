@@ -79,6 +79,17 @@ const data = {
     description: 'high quality item',
 
 },
+{
+    _id: '8',
+    name: 'Samosa',
+    category: 'Appetizers',
+    image: '/images/Samosa.jpg',
+    price: 35, countInStock:15,
+    rating: 4.2,
+    numReviews: 18,
+    description: 'high quality item',
+
+},
 ],
 };
 export default data;
